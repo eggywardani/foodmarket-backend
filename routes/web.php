@@ -19,14 +19,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-//Route::get('/', function () {
-//    return redirect()->route('dashboard');
-//});
-
 Route::get('/', function () {
-    return view('dashboard');
+    return redirect()->route('dashboard');
 });
-
 Route::prefix('dashboard')
     ->middleware(['auth:sanctum', 'admin'])
     ->group(function () {
